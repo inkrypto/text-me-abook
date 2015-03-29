@@ -1,0 +1,15 @@
+<h3>Now enter the mobile number</h3>
+<div class="container">
+  <div class="row">
+    <div class="class col-md-10 col-sm-6">
+      <div class="well">
+
+        <%= form_tag '/phone', :method => :post do %>
+          <%= telephone_field_tag :phone %>
+          <%= submit_tag "Submit" %>
+        <% end %>
+
+      </div>
+    </div>
+  </div>
+</div>
