@@ -47,10 +47,7 @@ class TextbooksController < ApplicationController
      text_message(pdf_reader)
   end
 
-  def pdf_reader
-    reader = PDF::Reader.new(current_user.book.url)
-    variable_containing_your_senteces
-  end
+  
 
   def text_message(body)
      account_sid = ENV['ACCOUNT_SID'] 
@@ -82,6 +79,27 @@ class TextbooksController < ApplicationController
   def change_book
   end 
 
+  def pdf_reader
+    reader = PDF::Reader.new(current_user.book.url)
+    #variable_containing_your_senteces
+    sentences_bookmark = current_user.sentences
+    page_bookmark = 1
+    page = reader.pages[page_bookmark].text
+    sentences = page.split(".")
+    if sentences[sentence_bookmark].nil?
+      #turn page:
+      page_bookmark += 1
+      sentence_bookmark = 0
+      page = reader.pages[page_bookmark].text
+      sentences = page.split(".")
+    end
+    # gets the next n sentences from book
+    sentences[sentence_bookmark..(sentence_bookmark + answer - 1)].each do |sentence|
+      puts sentence + "."
+    end
+    sentence_bookmark += answer
+  end
+
   def algo
     reader = PDF::Reader.new("../Documents/Code/AnyoneCan/CapStone/text-me-abook/www.planetebook.com/ebooks/Emma.pdf")
 
@@ -96,7 +114,6 @@ class TextbooksController < ApplicationController
       end
 
       page = reader.pages[page_bookmark].text
-      sentences = page.split(".")
 
       
       # check if we've reached the end of the page:
