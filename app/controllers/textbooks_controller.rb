@@ -7,6 +7,7 @@ class TextbooksController < ApplicationController
     end
   end
 
+
   def phone_number
     current_user.update(:phone => params[:phone])
     if current_user.save
@@ -38,13 +39,18 @@ class TextbooksController < ApplicationController
     # book = Book.find_by(params[:id)
     # users = User.find_by(:id => current_user.id)
     current_user.update(:sentences => params[:sentences], :book_id => params[:id])
-    if current_user.save
+    # if current_user.save
       flash[:success] = "We will text you #{current_user.sentences} sentences from #{current_user.book.title}."
+      # content = 
+      # text_message(params[:body])
+      p "HERE ARE YOUR SENTENCES:"
+      puts
+      p pdf_reader
+      # text_message(pdf_reader)
       redirect_to "/phone"
-    else 
-      render :show
-    end
-     text_message(pdf_reader)
+    # else 
+      # render :show
+    # end
   end
 
   
@@ -80,7 +86,9 @@ class TextbooksController < ApplicationController
   end 
 
   def pdf_reader
-    reader = PDF::Reader.new(current_user.book.url)
+    puts "AWS URL:"
+    p current_user.book.url.url
+    reader = PDF::Reader.new(current_user.book.url.url)
     #variable_containing_your_senteces
     sentences_bookmark = current_user.sentences
     page_bookmark = 1
@@ -95,7 +103,7 @@ class TextbooksController < ApplicationController
     end
     # gets the next n sentences from book
     sentences[sentence_bookmark..(sentence_bookmark + answer - 1)].each do |sentence|
-      puts sentence + "."
+      # puts sentence + "."
     end
     sentence_bookmark += answer
   end

@@ -12,7 +12,7 @@ gem 'twilio-ruby', '~> 3.12'
 
 gem 'carrierwave-aws'
 #gem 'carrierwave'
-
+gem 'pdf-reader'
 gem 'bootstrap-sass'
 
 gem 'quiet_assets'
