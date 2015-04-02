@@ -1,10 +1,10 @@
-<h3>How many sentences from <u><%="#{@textbooks.title}"%></u> would you like to read today?</h3>
+<h3>How many sentences from <u><%="#{@textbook.title}"%></u> would you like to read today?</h3>
 <div class="container">
   <div class="row">
     <div class="class col-md-10 col-sm-6">
       <div class="well">
         
-        <%= form_tag("/add_sentences/#{@textbooks.id}", method: "post") do %>
+        <%= form_tag("/add_sentences/#{@textbook.id}", method: "post") do %>
           <%= radio_button_tag(:sentences, 3) %>
           <%= label_tag(:sentences, "Three") %>
           <%= radio_button_tag(:sentences, 5) %>
@@ -12,7 +12,6 @@
           <%= radio_button_tag(:sentences, 10) %>
           <%= label_tag(:sentences, "Ten") %>
           <%= submit_tag("Submit") %>
-          <%= hidden_field_tag("id", params[:id])%>
         <% end %>
 
       </div>

@@ -21,6 +21,6 @@ Rails.application.routes.draw do
   post '/' => 'textbooks#create'
   put '/' => 'textbooks#update'
   get '/books/:id' => 'textbooks#show'
-  post '/add_sentences' => 'textbooks#add_sentences'
+  post '/add_sentences/:id' => 'textbooks#add_sentences'
   
 end
