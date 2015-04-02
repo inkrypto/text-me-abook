@@ -90,10 +90,7 @@ class TextbooksController < ApplicationController
   def pdf_reader
    user_book = current_user.book
 
-   p "URL: "
-   puts user_book.url
    io     = open(user_book.url.url)
-   # io = Unirest.get(user_book.url.url).raw_body
    reader = PDF::Reader.new(io)
 
    page = reader.pages[current_user.page_bookmark].text

@@ -10,7 +10,6 @@ gem 'pry-rails', :group => :development
 
 gem 'twilio-ruby', '~> 3.12'
 
-gem 'unirest'
 gem 'carrierwave-aws'
 #gem 'carrierwave'
 gem 'pdf-reader'
