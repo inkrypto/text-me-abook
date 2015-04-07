@@ -11,13 +11,12 @@ class Book < ActiveRecord::Base
 
     page = reader.pages[user.page_bookmark].text
 
-    page_sentences = page.split(".")
+    page_sentences = page.split(/[.,!?;]/)
     #page_sentences is an array
-
     if page_sentences[user.sentence_bookmark].nil? #this tests to see if they are at the end of the page
       user.update(:page_bookmark => user.page_bookmark + 1, :sentence_bookmark => 0)
       page = reader.pages[user.page_bookmark].text
-      page_sentences = page.split(".")
+      page_sentences = page.split(/[.,!?;]/)
     end
 
     sentences = user.sentences

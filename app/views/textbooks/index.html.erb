@@ -4,6 +4,12 @@
     <div class="class col-md-10 col-sm-6">
       <div class="well">
 
+        <h4>Enter your mobile number</h4>
+          <%= form_tag '/phone', :method => :post do %>
+            <%= telephone_field_tag :phone %>
+            <%= submit_tag "Submit" %>
+        <% end %>
+
         <h4>Search by Title or Author</h4>
           <%= form_tag '/', :method => :get do %>
            <%= text_field_tag :search %>
