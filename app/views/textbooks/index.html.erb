@@ -4,12 +4,6 @@
     <div class="class col-md-10 col-sm-6">
       <div class="well">
 
-        <h4>Enter your mobile number</h4>
-          <%= form_tag '/phone', :method => :post do %>
-            <%= telephone_field_tag :phone %>
-            <%= submit_tag "Submit" %>
-        <% end %>
-
         <h4>Search by Title or Author</h4>
           <%= form_tag '/', :method => :get do %>
            <%= text_field_tag :search %>
@@ -21,6 +15,12 @@
           <a href="/books/<%= textbook.id %>"<%= textbook.author %>><%=textbook.author%></a>
           </br>  
         <% end %>
+
+        <a href="https://twitter.com/textmeabook" class="twitter-follow-button" data-show-count="false">Follow @textmeabook</a>
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+        <a class="twitter-timeline" href="https://twitter.com/textmeabook" data-widget-id="585502600080003076">Tweets by @textmeabook</a>
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 
       </div>
     </div>
