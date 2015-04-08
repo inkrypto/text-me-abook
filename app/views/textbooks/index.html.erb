@@ -1,28 +1,28 @@
-<h3>Welcome to Text Me a Book</h3>
-<div class="container">
-  <div class="row">
-    <div class="class col-md-10 col-sm-6">
-      <div class="well">
+<div ng-controller="searchCtrl">
+  
+  {{ 1 + 1 }}
+  <h3>Welcome to Text Me a Book</h3>
+    <div class="container">
+      <div class="row">
+        <div class="class col-md-10 col-sm-6">
+          <div class="well">
 
-        <h4>Search by Title or Author</h4>
-          <%= form_tag '/', :method => :get do %>
-           <%= text_field_tag :search %>
-           <%= submit_tag "Search" %>
-        <% end %>
+            <input ng-model="searchTerm"/>
+            <button ng-click="search()">Search</button>
+            
+           <div ng-repeat="textbook in textbooks">   
+             <a href="/books/{{ textbook.id }}">Title: {{ textbook.title }}</a>
+             <p>Author: {{ textbook.author }}</p>
+             <p>Summary: {{ textbook.summary }}</p>
+              <hr>
+            </div>
           
-        <%@textbooks && @textbooks.each do |textbook| %>
-          <a href="/books/<%= textbook.id %>"><%=textbook.title%></a> --
-          <a href="/books/<%= textbook.id %>"<%= textbook.author %>><%=textbook.author%></a>
-          </br>  
-        <% end %>
+            <br>
+            <a class="twitter-timeline" href="https://twitter.com/textmeabook" data-widget-id="585502600080003076">Tweets by @textmeabook</a>
+            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 
-        <a href="https://twitter.com/textmeabook" class="twitter-follow-button" data-show-count="false">Follow @textmeabook</a>
-        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-
-        <a class="twitter-timeline" href="https://twitter.com/textmeabook" data-widget-id="585502600080003076">Tweets by @textmeabook</a>
-        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-
+          </div>
+        </div>
       </div>
     </div>
   </div>
-</div>
