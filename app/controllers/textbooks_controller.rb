@@ -3,9 +3,9 @@ class TextbooksController < ApplicationController
 
   def index
     # @textbooks = Book.all
-    if params[:search]
-      @textbooks = Book.where("title LIKE ? OR author LIKE ? OR isbn LIKE ?", "%#{params[:search]}%", "%#{params[:search]}%", "%#{params[:search]}%")
-    end
+    # if params[:search]
+    #   @textbooks = Book.where("title LIKE ? OR author LIKE ? OR isbn LIKE ?", "%#{params[:search]}%", "%#{params[:search]}%", "%#{params[:search]}%")
+    # end
   end
 
 
@@ -39,7 +39,7 @@ class TextbooksController < ApplicationController
   def add_sentences
     # book = Book.find_by(params[:id)
     # users = User.find_by(:id => current_user.id)
-    current_user.update(:sentences => params[:sentences], :book_id => params[:id], :page_bookmark => 1)
+    current_user.update(:sentences => params[:sentences], :book_id => params[:id], :page_bookmark => 1, :sentence_bookmark => 1)
     # if current_user.save
       flash[:success] = "We will text you #{current_user.sentences} sentences from #{current_user.book.title}."
       # content = 

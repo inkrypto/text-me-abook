@@ -10,6 +10,7 @@ Rails.application.routes.draw do
     end
   end
 
+  get '/search' => 'search#search'
   get '/change_book' => 'textbooks#change_book'
   post '/phone' => 'textbooks#phone_number'
   get '/phone'  => 'textbooks#phone'
