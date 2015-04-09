@@ -1,6 +1,6 @@
 class Book < ActiveRecord::Base
   has_many :users
-  
+  belongs_to :user_book
   mount_uploader :url, TextmebookUploader
 
   def text(user)
