@@ -37,21 +37,10 @@ class TextbooksController < ApplicationController
   end 
 
   def add_sentences
-    # book = Book.find_by(params[:id)
-    # users = User.find_by(:id => current_user.id)
-    current_user.update(:sentences => params[:sentences], :book_id => params[:id], :page_bookmark => 1, :sentence_bookmark => 1)
+    current_user.update(:sentences => params[:sentences], :book_id => params[:id], :page_bookmark => 1, :sentence_bookmark => 0)
     # if current_user.save
       flash[:success] = "We will text you #{current_user.sentences} sentences from #{current_user.book.title}."
-      # content = 
-      # text_message(params[:body])
-      # p "HERE ARE YOUR SENTENCES:"
-      # puts
-      # p pdf_reader
-      # text_message(pdf_reader)
-    # else 
-      # render :show
-    # end
-     # pdf_reader
+   
      book = Book.find(params[:id])
      book.text(current_user)
      redirect_to authenticated_root_path
@@ -78,6 +67,7 @@ class TextbooksController < ApplicationController
 
   def upload_book
     @textbook = Book.create(book_params)
+    UserBook.create(user_id: current_user.id, book_id: @textbook.id)
     flash[:success] = "Book added."
     redirect_to "/upload"
   end

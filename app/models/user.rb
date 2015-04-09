@@ -4,5 +4,6 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  belongs_to :book       
+  belongs_to :book 
+  has_many :user_books      
 end

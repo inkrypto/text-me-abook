@@ -1,28 +1,42 @@
-<div ng-controller="searchCtrl">
+<div ng-app="app">
+  <div ng-controller="searchCtrl">
   
-  {{ 1 + 1 }}
-  <h3>Welcome to Text Me a Book</h3>
-    <div class="container">
-      <div class="row">
-        <div class="class col-md-10 col-sm-6">
-          <div class="well">
+      {{ 1 + 1 }}
+  
+    <h3>Welcome to Text Me a Book</h3>
+      <div class="container">
+        <div class="row">
+          <div class="class col-md-10 col-sm-6">
+            <div class="well">
 
-            <input ng-model="searchTerm"/>
-            <button ng-click="search()">Search</button>
+              <h4>How it works.  Search for a classic novel or upload your own.  Select what you want to read.  Then choose how many sentence from that book you’d like to receive everyday.  We will text you the first set of sentences immediately and then everyday you’ll get a next set until the book through.  
+              <br><br>
+              Get started
+              </h4>
+
+              <input ng-model="searchTerm" list="textbooks">
+              
+              <datalist id="textbooks">
+                <option ng-repeat="textbook in textbooks">{{textbook.title}}</option>
+              </datalist>
+
+              <button ng-click="search()">Search</button>
+             
+              <div ng-repeat="textbook in textbooks">   
+               <a href="/books/{{ textbook.id }}">Title: {{ textbook.title }}</a>
+               <p>Author: {{ textbook.author }}</p>
+               <p>Summary: {{ textbook.summary }}</p>
+                <hr>
+              </div>
             
-           <div ng-repeat="textbook in textbooks">   
-             <a href="/books/{{ textbook.id }}">Title: {{ textbook.title }}</a>
-             <p>Author: {{ textbook.author }}</p>
-             <p>Summary: {{ textbook.summary }}</p>
-              <hr>
-            </div>
-          
-            <br>
-            <a class="twitter-timeline" href="https://twitter.com/textmeabook" data-widget-id="585502600080003076">Tweets by @textmeabook</a>
-            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+              <br>
+              <br>
+              <a class="twitter-timeline" href="https://twitter.com/textmeabook" data-widget-id="585502600080003076">Tweets by @textmeabook</a>
+              <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 
           </div>
         </div>
       </div>
     </div>
   </div>
+</div>
