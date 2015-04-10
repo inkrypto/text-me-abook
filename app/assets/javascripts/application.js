@@ -12,7 +12,24 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require bootstrap-sprockets
 //= require angular
 //= require app
+//= require quick/easypiechart
+//= require quick/jqBootstrapValidation
+//= require quick/jquery.backstretch.min
+//= require quick/jquery.counterup.min
+//= require quick/jquery.easing.1.3.min
+//= require quick/jquery.flexslider-min
+//= require quick/jquery.magnific-popup.min
+//= require quick/jquery.mixitup.min
+//= require quick/jquery.stellar.min
+//= require quick/jquery.sticky
+//= require quick/owl.carousel.min
+//= require quick/tweetie.min
+//= require quick/waypoints.min
+//= require quick/wow.min
+//= require quick/custom
+//= require bootstrap
+//= require bootstrap-sprockets
+
 //= require_tree .

@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-
+ruby "2.0.0"
 #Added by Author
 group :development, :test do
   gem 'rspec-rails', '~> 3.0.0'
