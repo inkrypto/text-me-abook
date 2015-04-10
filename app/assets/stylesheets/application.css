@@ -9,7 +9,14 @@
  * compiled file so the styles you add here take precedence over styles defined in any styles
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
- *
+ 
+ *= require quick/animate
+ *= require quick/flexslider
+ *= require quick/magnific-popup
+ *= require quick/owl.carousel
+ *= require quick/owl.theme
+ *= require quick/style
  *= require_tree .
  *= require_self
+ 
  */

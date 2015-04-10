@@ -1,5 +1,6 @@
 class TextbooksController < ApplicationController
   require 'open-uri'
+  layout 'nav', only: :index
 
   def index
     # @textbooks = Book.all

@@ -1,24 +1,23 @@
-<div ng-app="app">
+<<div ng-app="app">
   <div ng-controller="searchCtrl">
   
-      {{ 1 + 1 }}
-  
-    <h3>Welcome to Text Me a Book</h3>
-      <div class="container">
+      <div class="container" id="search">
         <div class="row">
           <div class="class col-md-10 col-sm-6">
             <div class="well">
 
-              <h4>How it works.  Search for a classic novel or upload your own.  Select what you want to read.  Then choose how many sentence from that book you’d like to receive everyday.  We will text you the first set of sentences immediately and then everyday you’ll get a next set until the book through.  
+              <h4>How it works. 
+                <br>
+                Search for a classic novel or upload your own PDF.  Select what you want to read. Choose the number sentence that you’d like.  And we will text them to you. The first set happens immediately and then everyday you’ll get the next set of sentences until the book is through.  
               <br><br>
               Get started
               </h4>
 
               <input ng-model="searchTerm" list="textbooks">
               
-              <datalist id="textbooks">
+              <!-- <datalist id="textbooks">
                 <option ng-repeat="textbook in textbooks">{{textbook.title}}</option>
-              </datalist>
+              </datalist> -->
 
               <button ng-click="search()">Search</button>
              
@@ -40,3 +39,5 @@
     </div>
   </div>
 </div>
+
+    
