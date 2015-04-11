@@ -1,6 +1,6 @@
 class TextbooksController < ApplicationController
   require 'open-uri'
-  layout 'nav', only: :index
+  layout 'nav', only: :index 
 
   def index
     # @textbooks = Book.all
@@ -14,9 +14,9 @@ class TextbooksController < ApplicationController
     current_user.update(:phone => params[:phone])
     if current_user.save
       flash[:success] = "Phone number added."
-      redirect_to "/"
+      redirect_to "/phone"
     else 
-      render :index
+      render :phone
     end
   end
 
@@ -83,6 +83,9 @@ class TextbooksController < ApplicationController
   
   def book_params
     params.require(:book).permit(:title, :author, :isbn, :summary, :url)
+  end
+
+  def contact
   end
   
 end
