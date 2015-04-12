@@ -1,4 +1,5 @@
 class UserBooksController < ApplicationController
+  before_action :authenticate_user!
 
   def mybooks
       @textbook = Book.new
