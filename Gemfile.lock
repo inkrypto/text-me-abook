@@ -243,7 +243,7 @@ DEPENDENCIES
   jquery-rails
   mysql2
   pdf-reader
-  pg (= 0.18.1)
+  pg
   pry-rails
   quiet_assets
   rails (= 4.2.0)
