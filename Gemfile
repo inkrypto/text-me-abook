@@ -19,7 +19,7 @@ gem 'quiet_assets'
 
 gem 'devise'
 
-gem 'pg', '0.18.1', group: :production
+gem 'pg', group: :production
 gem 'rails_12factor', group: :production
 
 #--------------------------------------------------------------------------------------
