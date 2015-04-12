@@ -2,18 +2,32 @@
   <div class="container">
     <div class="row">
       <div class="col-md-12">
-        <div class="text-center">
+        <div class="text-center center-form">
           <p class="lead">Upload a Book</p>
-        <%= form_for @textbook, url: {action: "upload_book"} do |f|%>  
-          <%= f.label :title %>
-          <%= f.text_field :title %>
-          <%= f.label :author %>
-          <%= f.text_field :author %>
-          <%= f.label :description %>
-          <%= f.text_field :summary %>
-          <%= f.label :PDF %>
-          <%= f.file_field :url %>
-          <%= f.submit "Upload" %>
+        <%= form_for @textbook, url: {action: "upload_book"} do |f|%> 
+          <div> 
+            <%= f.label :title %>
+            <%= f.text_field :title %>
+          </div>
+          <br>
+          <div>
+            <%= f.label :author %>
+            <%= f.text_field :author %>
+          </div>
+          <br>
+          <div>
+            <%= f.label :description %>
+            <%= f.text_field :summary %>
+          </div>
+          <br>
+          <div>
+            <%= f.label :PDF %>
+            <%= f.file_field :url, :class => 'file-field' %>
+          </div>
+          <br>
+          <!-- <div> -->
+            <%= f.submit "Upload", :class => 'center-button' %>
+          <!-- </div> -->
         <%end %>
         </div>
       </div>

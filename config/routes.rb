@@ -10,6 +10,7 @@ Rails.application.routes.draw do
     end
   end
 
+  post '/contact' => 'textbooks#send_contact'
   get '/contact' => 'textbooks#contact'
   get '/mybooks' => 'user_books#mybooks'
   get '/search' => 'search#search'

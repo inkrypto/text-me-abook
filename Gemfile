@@ -3,9 +3,9 @@ ruby "2.0.0"
 #Added by Author
 group :development, :test do
   gem 'rspec-rails', '~> 3.0.0'
-  gem 'dotenv-rails'
 end
 
+gem 'dotenv-rails'
 gem 'pry-rails', :group => :development
 
 gem 'twilio-ruby', '~> 3.12'

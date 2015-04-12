@@ -1,6 +1,9 @@
 class TextbooksController < ApplicationController
   require 'open-uri'
   layout 'nav', only: :index 
+  skip_before_filter :verify_authenticity_token, :only => [:send_contact]
+  before_action :authenticate_user!
+
 
   def index
     # @textbooks = Book.all
@@ -8,7 +11,6 @@ class TextbooksController < ApplicationController
     #   @textbooks = Book.where("title LIKE ? OR author LIKE ? OR isbn LIKE ?", "%#{params[:search]}%", "%#{params[:search]}%", "%#{params[:search]}%")
     # end
   end
-
 
   def phone_number
     current_user.update(:phone => params[:phone])
@@ -47,8 +49,6 @@ class TextbooksController < ApplicationController
      redirect_to authenticated_root_path
   end
 
-  
-
   def text_message(body)
      account_sid = ENV['ACCOUNT_SID'] 
      auth_token = ENV['AUTH_TOKEN'] 
@@ -86,6 +86,15 @@ class TextbooksController < ApplicationController
   end
 
   def contact
+  end
+
+  def send_contact
+    name = params["name"]
+    phone = params["phone"]
+    email = params["email"]
+    message = params["message"]
+    ContactMailer.sample_email(name, phone, email, message).deliver
+    redirect_to "/"
   end
   
 end

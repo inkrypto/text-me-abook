@@ -11,3 +11,40 @@
   color: white;
 }
 
+.file-field {
+  display: inline !important;
+  margin-left: 100px;
+}
+
+.center-form {
+  width: 293px;
+  text-align: center;
+  margin: auto;
+}
+
+  // input {
+  //   float: right;
+  // }
+
+  .center-button {
+    float: none;
+    // width: 100%;
+    margin: auto;
+  }
+
+.center-search {
+  margin: 200px;
+}
+
+.author {
+  background-color: #222222;
+  color: #9d9d9d;
+  font-family: "Montserrat";
+  font-size: 36px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.navbar-border{
+  border-color: #222222 !important; 
+}
