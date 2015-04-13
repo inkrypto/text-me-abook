@@ -46,7 +46,7 @@ class TextbooksController < ApplicationController
    
      book = Book.find(params[:id])
      book.text(current_user)
-     redirect_to authenticated_root_path
+     redirect_to "/change_book"#authenticated_root_path
   end
 
   def text_message(body)
