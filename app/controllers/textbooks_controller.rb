@@ -51,7 +51,8 @@ class TextbooksController < ApplicationController
      auth_token = ENV['AUTH_TOKEN'] 
 
      logger.debug "TEST TEXT ENV"
-     logger.debug ENV['AWS_BUCKET']
+     logger.debug ENV
+     logger.debug ENV['AUTH_TOKEN'] 
     
     @client = Twilio::REST::Client.new(account_sid, auth_token)
     
