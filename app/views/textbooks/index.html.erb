@@ -14,30 +14,29 @@
       <p class="lead margin-btm-30">
         Search for a classic novel or upload your own PDF. Select what you want to read. Choose the number sentence that you’d like.  And we will text them to you. The first set happens immediately and then everyday you’ll get the next set of sentences until the book is through. 
       </p>
+
+      
+      <div ng-app="app">
+        <div class="col-md-6 col-md-offset-3 text-center">
+         <div ng-controller="searchCtrl">
+          <div  id="search">
+              <input ng-model="searchTerm" list="textbooks">
+              <button ng-click="search()">Search</button>
+                <div ng-repeat="textbook in textbooks">   
+                  <a href="/books/{{ textbook.id }}">Title: {{ textbook.title }}</a>
+                    <p> Author: {{ textbook.author }} </p>
+                    <p> Summary: {{ textbook.summary }} </p>
+                     <hr> 
+                </div>      
+            </div>
+          </div>    
+        </div>
+      </div>  
+
     </div> 
   </div>   
-  
-  <div class="col-md-12">           
-    <div ng-app="app">
-      <div class="text-center">
-       <div ng-controller="searchCtrl">
-        <div class="container" id="search">
-            <input ng-model="searchTerm" list="textbooks">
-            <button ng-click="search()">Search</button>
-            <div class="center-search">
-              <div ng-repeat="textbook in textbooks">   
-                <a href="/books/{{ textbook.id }}">Title: {{ textbook.title }}</a>
-                  <p> Author: {{ textbook.author }} </p>
-                  <p> Summary: {{ textbook.summary }} </p>
-                   <hr> 
-              </div>      
-            </div> 
-          </div>
-        </div>    
-      </div>
-    </div>  
-  </div>
-      
+ 
+
   <section id="about" class="section-padding">
     <div class="container">
       <div class="row">
