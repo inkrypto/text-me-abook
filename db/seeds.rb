@@ -1,10 +1,3 @@
-User.create!([
-  {email: "x@gm.com", encrypted_password: "$2a$10$QEapg/CqZOWkznCnAI/CZOzZap0bMnQvZJUSNpAbBhQKXQoQp1/by", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, sign_in_count: 33, current_sign_in_at: "2015-04-12 20:26:59", last_sign_in_at: "2015-04-12 19:10:22", current_sign_in_ip: "127.0.0.1", last_sign_in_ip: "127.0.0.1", full_name: "Brent Morris", phone: "9045270149", sentences: 3, book_id: 0, sentence_bookmark: 0, page_bookmark: 0},
-  {email: "inkrypto@gmail.com", encrypted_password: "$2a$10$eL7.9Ffd/mwLbKUn4yWS2uOAltIZrL7WpdHf3GqknAQGs7VrwYBXe", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, sign_in_count: 42, current_sign_in_at: "2015-04-12 20:47:15", last_sign_in_at: "2015-04-12 20:39:27", current_sign_in_ip: "127.0.0.1", last_sign_in_ip: "127.0.0.1", full_name: "asdf asdadsf", phone: "999999999", sentences: 10, book_id: 104, sentence_bookmark: 10, page_bookmark: 1},
-  {email: "brentmorris9@yahoo.com", encrypted_password: "$2a$10$MhugBbNjwBreWrKtkBoCceVePkwxLFBVgZsp77NVnJAgD/R0KmgsS", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, sign_in_count: 3, current_sign_in_at: "2015-03-27 01:43:47", last_sign_in_at: "2015-03-25 20:49:53", current_sign_in_ip: "127.0.0.1", last_sign_in_ip: "127.0.0.1", full_name: nil, phone: "877798779", sentences: nil, book_id: nil, sentence_bookmark: nil, page_bookmark: nil},
-  {email: "shlomo@gmail.com", encrypted_password: "$2a$10$qR0tqsQMZrNtO8IsMUPQZu00hYsjw5jc0l7HCmUwJNla8yyYhbOJ6", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, sign_in_count: 1, current_sign_in_at: "2015-04-12 14:47:17", last_sign_in_at: "2015-04-12 14:47:17", current_sign_in_ip: "127.0.0.1", last_sign_in_ip: "127.0.0.1", full_name: "shlomo y", phone: "9045270149", sentences: 3, book_id: 104, sentence_bookmark: 3, page_bookmark: 1},
-  {email: "ystwerski@gmail.com", encrypted_password: "$2a$10$TxeJezuWD2kt5LQuWdHYMO2xv03sB4o/g29EGzW8XKXefTUDD/Gq6", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, sign_in_count: 1, current_sign_in_at: "2015-04-12 20:32:56", last_sign_in_at: "2015-04-12 20:32:56", current_sign_in_ip: "127.0.0.1", last_sign_in_ip: "127.0.0.1", full_name: "Shlomo Twerski", phone: "7737156825", sentences: 10, book_id: 104, sentence_bookmark: 10, page_bookmark: 1}
-])
 Book.create!([
   {title: nil, author: nil, isbn: nil, url: nil, summary: nil, is_public: true},
   {title: nil, author: nil, isbn: nil, url: nil, summary: nil, is_public: true},
@@ -87,12 +80,7 @@ Book.create!([
   {title: "Dracula", author: "Bram Stoker", isbn: nil, url: "Dracula.pdf", summary: "OG Vampire", is_public: true},
   {title: "Wuthering Heights", author: "Emily Brontë", isbn: nil, url: "Wuthering-Heights-2.pdf", summary: "Wuthering Heights is the name of the farmhouse where the story unfolds. The book's core theme is the destructive effect of jealousy and vengefulness both on the jealous or vengeful individuals and on their communities.", is_public: true},
   {title: "On the Road", author: "Jack Kerouac", isbn: nil, url: "OnTheRoad.pdf", summary: "On the Road is a novel by American writer Jack Kerouac, based on the travels of Kerouac and his friends across America.", is_public: true},
-  {title: "", author: "", isbn: nil, url: nil, summary: "", is_public: false}
+  {title: "the test", author: "morris", isbn: nil, url: "The-Legend-of-Sleepy-Hollow-2.pdf", summary: "jkljlfkajsdf", is_public: false},
+  {title: "ZZZZ", author: "bretn", isbn: nil, url: "BrentResMini.pdf", summary: "asdflkasdf", is_public: false}
 ])
-UserBook.create!([
-  {user_id: 5, book_id: 106},
-  {user_id: 5, book_id: 107},
-  {user_id: 2, book_id: nil},
-  {user_id: 2, book_id: nil},
-  {user_id: 7, book_id: 108}
-])
+
