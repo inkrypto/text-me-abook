@@ -2,7 +2,7 @@ class TextbooksController < ApplicationController
   require 'open-uri'
   layout 'nav', only: :index 
   skip_before_filter :verify_authenticity_token, :only => [:send_contact]
-  before_action :authenticate_user!
+  #before_action :authenticate_user!
 
 
   def index
