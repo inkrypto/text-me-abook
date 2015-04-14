@@ -4,7 +4,7 @@
       <div class="col-md-12">
         <div class="text-center">
           
-          <p class="lead"><strong>How</strong> many sentences from <strong><u><%="#{@textbook.title}"%></strong></u> would you like to read<strong> today?</strong></p>
+          <p class="lead">How many sentences from <u><%="#{@textbook.title}"%></u> would you like to read today?</p>
 
           <%= form_tag("/add_sentences/#{@textbook.id}", method: "post") do %>
             <%= radio_button_tag(:sentences, 3) %>

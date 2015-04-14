@@ -25,9 +25,6 @@ class TextbooksController < ApplicationController
   def new
     account_sid = ENV['ACCOUNT_SID']
     auth_token = ENV['AUTH_TOKEN'] 
-
-    account_sid = ENV['ACCOUNT_SID'] 
-    auth_token = ENV['AUTH_TOKEN']
     
     # set up a client to talk to the Twilio REST API
     @client = Twilio::REST::Client.new(account_sid, auth_token)   
@@ -46,7 +43,7 @@ class TextbooksController < ApplicationController
    
      book = Book.find(params[:id])
      book.text(current_user)
-     redirect_to "/change_book"#authenticated_root_path
+     redirect_to "/change_book"
   end
 
   def text_message(body)

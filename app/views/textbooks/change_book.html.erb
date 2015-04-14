@@ -5,19 +5,6 @@
         <div class="text-center">
           <p class="lead"><strong>Change Books</strong></p>
       
-          <p class="lead"><strong>How</strong> many sentences from <strong><u><%="#{@textbook.title}"%></strong></u> would you like to read<strong> today?</strong></p>
-
-          <%= form_tag("/add_sentences/#{@textbook.id}", method: "post") do %>
-            <%= radio_button_tag(:sentences, 3) %>
-            <%= label_tag(:sentences, "Three") %>
-            <%= radio_button_tag(:sentences, 5) %>
-            <%= label_tag(:sentences, "Five") %>
-            <%= radio_button_tag(:sentences, 10) %>
-            <%= label_tag(:sentences, "Ten") %>
-            <%= submit_tag("Submit") %>
-          <% end %>
-
-      
         <div class="row">
           <div class="col-md-8 col-md-offset-2 text-center wow animated fadeInUp"   data-wow-duration="700ms" data-wow-delay="300ms">
             <p class="lead margin-btm-30">
