@@ -2,7 +2,7 @@ class TextbooksController < ApplicationController
   require 'open-uri'
   layout 'nav', only: :index 
   skip_before_filter :verify_authenticity_token, :only => [:send_contact]
-  #before_action :authenticate_user!
+  before_action :authenticate_user!
 
 
   def index
@@ -50,8 +50,8 @@ class TextbooksController < ApplicationController
      account_sid = ENV['ACCOUNT_SID'] 
      auth_token = ENV['AUTH_TOKEN'] 
 
-     puts "TEST TEXT ENV"
-     puts ENV
+     logger.debug "TEST TEXT ENV"
+     logger.debug ENV['AWS_BUCKET']
     
     @client = Twilio::REST::Client.new(account_sid, auth_token)
     
