@@ -52,6 +52,9 @@ class TextbooksController < ApplicationController
   def text_message(body)
      account_sid = ENV['ACCOUNT_SID'] 
      auth_token = ENV['AUTH_TOKEN'] 
+
+     puts "TEST TEXT ENV"
+     puts ENV
     
     @client = Twilio::REST::Client.new(account_sid, auth_token)
     
