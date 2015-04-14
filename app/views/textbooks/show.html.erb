@@ -1,20 +1,45 @@
-<h3>How many sentences from <u><%="#{@textbook.title}"%></u> would you like to read today?</h3>
-<div class="container">
-  <div class="row">
-    <div class="class col-md-10 col-sm-6">
-      <div class="well">
-        
-        <%= form_tag("/add_sentences/#{@textbook.id}", method: "post") do %>
-          <%= radio_button_tag(:sentences, 3) %>
-          <%= label_tag(:sentences, "Three") %>
-          <%= radio_button_tag(:sentences, 5) %>
-          <%= label_tag(:sentences, "Five") %>
-          <%= radio_button_tag(:sentences, 10) %>
-          <%= label_tag(:sentences, "Ten") %>
-          <%= submit_tag("Submit") %>
-        <% end %>
+<section id="about" class="section-padding">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="text-center">
+          
+          <p class="lead"><strong>How</strong> many sentences from <strong><u><%="#{@textbook.title}"%></strong></u> would you like to read<strong> today?</strong></p>
 
+          <%= form_tag("/add_sentences/#{@textbook.id}", method: "post") do %>
+            <%= radio_button_tag(:sentences, 3) %>
+            <%= label_tag(:sentences, "Three") %>
+            <%= radio_button_tag(:sentences, 5) %>
+            <%= label_tag(:sentences, "Five") %>
+            <%= radio_button_tag(:sentences, 10) %>
+            <%= label_tag(:sentences, "Ten") %>
+            <%= submit_tag("Submit") %>
+          <% end %>
+
+          <br>
+          <p class="lead"><strong>What time</strong> tomorrow and going forward would you like to recieve sentences from <strong>Text Me a Book?</strong></p>
+
+        </div>
       </div>
     </div>
   </div>
 </div>
+
+<div class="divided-50"></div>
+  <div class="cta">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-8 margin-btm-30">
+          <h3>
+            <strong>TextMeABook</strong> a simple way to commit to "Jane Erye"
+          </h3>
+        </div>
+        <div class="col-sm-4">
+          <a href="/#about" class="btn btn-theme btn-lg">Search</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>    
+
+
