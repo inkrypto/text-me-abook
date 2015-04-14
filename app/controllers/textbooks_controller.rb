@@ -51,9 +51,10 @@ class TextbooksController < ApplicationController
      auth_token = ENV['AUTH_TOKEN'] 
 
      logger.debug "TEST TEXT ENV"
-     logger.debug ENV
+     logger.debug ENV.to_h.to_yaml
      logger.debug ENV['AUTH_TOKEN'] 
      logger.debug ENV['SECRET_ACCESS_KEY']
+
     
     @client = Twilio::REST::Client.new(account_sid, auth_token)
     
