@@ -10,7 +10,4 @@ CarrierWave.configure do |config|
     secret_access_key: ENV['SECRET_ACCESS_KEY']
   }
 
-   logger.debug 'What the heck is going on!!!?'
-   logger.debug ENV.to_h.to_yaml
-
 end
