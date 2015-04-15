@@ -74,6 +74,7 @@ class TextbooksController < ApplicationController
     UserBook.create(user_id: current_user.id, book_id: @textbook.id)
     flash[:success] = "Book added."
     redirect_to "/upload"
+
   end
 
   def show

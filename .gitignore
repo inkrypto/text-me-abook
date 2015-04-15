@@ -15,5 +15,6 @@
 /.env
 /twilio-ruby
 /config/initializers/carrierwave.rb
+/config/database.yml
 
 

@@ -47,8 +47,11 @@ test:
 #   production:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
-production:
-  database: text-me-abook_production
-  adapter: postgresql
-  encoding: unicode
-  pool: 5
+
+production: 
+    adapter: mysql2
+    encoding: utf8
+    pool: 5
+    username: rails
+    password: 0wFh8fGBmL
+    socket: /tmp/mysql.sock
