@@ -81,6 +81,8 @@ Book.create!([
   {title: "Wuthering Heights", author: "Emily Brontë", isbn: nil, url: "Wuthering-Heights-2.pdf", summary: "Wuthering Heights is the name of the farmhouse where the story unfolds. The book's core theme is the destructive effect of jealousy and vengefulness both on the jealous or vengeful individuals and on their communities.", is_public: true},
   {title: "On the Road", author: "Jack Kerouac", isbn: nil, url: "OnTheRoad.pdf", summary: "On the Road is a novel by American writer Jack Kerouac, based on the travels of Kerouac and his friends across America.", is_public: true},
   {title: "the test", author: "morris", isbn: nil, url: "The-Legend-of-Sleepy-Hollow-2.pdf", summary: "jkljlfkajsdf", is_public: false},
-  {title: "ZZZZ", author: "bretn", isbn: nil, url: "BrentResMini.pdf", summary: "asdflkasdf", is_public: false}
+  {title: "ZZZZ", author: "bretn", isbn: nil, url: "BrentResMini.pdf", summary: "asdflkasdf", is_public: false},
+  {title: "jays book", author: "jay", isbn: nil, url: "linder.pdf", summary: "asdfasdf", is_public: false},
+  {title: "mark test", author: "mark", isbn: nil, url: "test.pdf", summary: "marks book", is_public: false},
+  {title: "mark test", author: "mark", isbn: nil, url: "test.pdf", summary: "marks book", is_public: false}
 ])
-
