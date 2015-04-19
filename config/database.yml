@@ -47,8 +47,11 @@ test:
 #   production:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
-production:
-  <<: *default
-  database: text-me-abook_production
-  username: text-me-abook
-  password: <%= ENV['TEXT-ME-ABOOK_DATABASE_PASSWORD'] %>
+
+production: 
+    adapter: postgresql
+    encoding: utf8
+    pool: 5
+    username: rails
+    password: 0wFh8fGBmL
+    socket: /tmp/mysql.sock
