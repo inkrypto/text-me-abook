@@ -21,12 +21,11 @@
   // input {
   //   float: right;
   // }
-
-  .center-button {
-    float: none;
-    // width: 100%;
-    margin: auto;
-  }
+.center-button {
+  float: none;
+  // width: 100%;
+  margin: auto;
+}
 
 .center-search {
 }
@@ -44,6 +43,12 @@
   border-color: #222222 !important; 
 }
 
-body{
-  background: url(1.jpg) !important;
+.body{
+  background: url(1.jpg);
 }
+
+.login-border{
+  border: 3px solid #222222;
+  border-radius: 10px;
+}
+
