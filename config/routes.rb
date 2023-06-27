@@ -20,7 +20,6 @@ Rails.application.routes.draw do
   post '/upload_book' => 'textbooks#upload_book'
   get '/upload' => 'textbooks#upload', as: 'books_path'
   get '/'  => 'textbooks#index'
-  get '/preferences' => 'textbooks#preferences'
   get '/new' => 'textbooks#new'
   post '/' => 'textbooks#create'
   put '/' => 'textbooks#update'

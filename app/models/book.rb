@@ -31,6 +31,8 @@ class Book < ActiveRecord::Base
     # page_sentences[10..(10 + 3 - 1)]
     # page_sentences[10..12].each do |sentence|
     # end
+    puts "MODEL ENV"
+    puts ENV
 
     account_sid = ENV['ACCOUNT_SID'] 
     auth_token = ENV['AUTH_TOKEN'] 

@@ -1,7 +1,3 @@
-#home {
-  background-image: url(books.jpg);
-}
-
 .search-to {
   color: white;
   background-color: rgba(0,0,0,.5);
@@ -33,7 +29,6 @@
   }
 
 .center-search {
-  margin: 200px;
 }
 
 .author {
@@ -47,4 +42,8 @@
 
 .navbar-border{
   border-color: #222222 !important; 
+}
+
+body{
+  background: url(1.jpg) !important;
 }
